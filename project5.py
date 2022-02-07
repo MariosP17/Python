@@ -60,5 +60,3 @@ removeNonLetter("text.txt")
 countWords("text.txt")
 countDoubles("text.txt")
 countTriples("text.txt")
-     
-     
