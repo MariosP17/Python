@@ -14,22 +14,21 @@ def removeNonLetter(str):
     with open(str, 'w+') as result:
         result.writelines(final)
     f.close()
-def countWords(str):
+def countWords(a):
     from collections import Counter
-    f = open(str, 'r+')
+    f = open(a, 'r+')
     read = f.read()
     list = read.split(' ')
     Counter = Counter(list)
     mostCommon = Counter.most_common(10)
-    print('Oι δέκα πιο δημοφιλείς λέξεις με την συχνότητα τους ειναι:')
-    print(mostCommon)
+    print('Oι δέκα πιο δημοφιλείς λέξεις με την συχνότητα τους ειναι: '+ str(mostCommon))
     f.close  
-def countDoubles(str):
+def countDoubles(a):
     listOfTwo = []
     def firstTwo(s):
         return s[:2]
     from collections import Counter
-    f = open(str, 'r+')
+    f = open(a, 'r+')
     read = f.read()
     list = read.split(' ')
     num = len(list)
@@ -38,15 +37,14 @@ def countDoubles(str):
            listOfTwo.append(list[i])
     Counter = Counter(listOfTwo)
     mostCommon = Counter.most_common(3)
-    print('Oι τρεις πρώτοι υνδυασμοί δύο πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι:')
-    print(mostCommon)
+    print('Oι τρεις πρώτοι υνδυασμοί δύο πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι: '+ str(mostCommon))
     f.close  
-def countTriples(str):
+def countTriples(a):
     listOfThree = []
     def firstThree(s):
         return s[:3]
     from collections import Counter
-    f = open(str, 'r+')
+    f = open(a, 'r+')
     read = f.read()
     list = read.split(' ')
     num = len(list)
@@ -55,12 +53,12 @@ def countTriples(str):
            listOfThree.append(list[i])
     Counter = Counter(listOfThree)
     mostCommon = Counter.most_common(3)
-    print('Oι τρεις πρώτοι υνδυασμοί τριών πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι:')
-    print(mostCommon)
+    print('Oι τρεις πρώτοι υνδυασμοί τριών πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι: ' + str(mostCommon))
     f.close  
 makeLower("text.txt")    
 removeNonLetter("text.txt")
 countWords("text.txt")
 countDoubles("text.txt")
 countTriples("text.txt")
+     
      
