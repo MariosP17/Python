@@ -25,32 +25,27 @@ def countWords(a):
     f.close  
 def countDoubles(a):
     listOfTwo = []
-    def firstTwo(s):
-        return s[:2]
     from collections import Counter
     f = open(a, 'r+')
     read = f.read()
     list = read.split(' ')
-    num = len(list)
-    for i in range(num):
-       if len(list[i]) == 2:
-           listOfTwo.append(list[i])
+    for s in list:
+        if len(s)>2:
+         listOfTwo.append(s[:2])
     Counter = Counter(listOfTwo)
     mostCommon = Counter.most_common(3)
     print('Oι τρεις πρώτοι συνδυασμοί δύο πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι: '+ str(mostCommon))
     f.close  
 def countTriples(a):
     listOfThree = []
-    def firstThree(s):
-        return s[:3]
     from collections import Counter
     f = open(a, 'r+')
     read = f.read()
     list = read.split(' ')
     num = len(list)
-    for i in range(num):
-       if len(list[i]) == 3:
-           listOfThree.append(list[i])
+    for s in list:
+        if len(s)>3:
+         listOfThree.append(s[:3])
     Counter = Counter(listOfThree)
     mostCommon = Counter.most_common(3)
     print('Oι τρεις πρώτοι συνδυασμοί τριών πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι: ' + str(mostCommon))
