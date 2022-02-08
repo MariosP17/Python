@@ -53,7 +53,7 @@ def countTriples(a):
            listOfThree.append(list[i])
     Counter = Counter(listOfThree)
     mostCommon = Counter.most_common(3)
-    print('Oι τρεις πρώτοι υνδυασμοί τριών πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι: ' + str(mostCommon))
+    print('Oι τρεις πρώτοι συνδυασμοί τριών πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι: ' + str(mostCommon))
     f.close  
 makeLower("text.txt")    
 removeNonLetter("text.txt")
