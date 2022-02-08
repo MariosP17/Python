@@ -37,7 +37,7 @@ def countDoubles(a):
            listOfTwo.append(list[i])
     Counter = Counter(listOfTwo)
     mostCommon = Counter.most_common(3)
-    print('Oι τρεις πρώτοι υνδυασμοί δύο πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι: '+ str(mostCommon))
+    print('Oι τρεις πρώτοι συνδυασμοί δύο πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι: '+ str(mostCommon))
     f.close  
 def countTriples(a):
     listOfThree = []
