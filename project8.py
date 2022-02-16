@@ -6,7 +6,6 @@ def chess(h,w):
     for x in range(1,h+1):
         for y in range(1,w+1):
             position.append((x,y))
-    print(position)
     for n in range(100):
         wRook = random.choice(position)
         bBishop = random.choice(position)
