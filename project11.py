@@ -1,5 +1,4 @@
 from urllib.request import Request, urlopen
-from numpy import int64
 from scipy.stats import entropy
 import pandas as pd
 
