@@ -11,7 +11,7 @@ def chess(h,w):
         bBishop = random.choice(position)
         while wRook == bBishop:
          bBishop = random.choice(position)
-        print(str(n+1)+")",wRook,bBishop)
+        print(str(n+1)+")",'Πύργος:',wRook,'Αξιωματικός:',bBishop)
         rookX, rookY = wRook
         bishopX, bishopY = bBishop
         if rookX == bishopX or rookY == bishopY:
