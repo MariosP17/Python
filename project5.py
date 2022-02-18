@@ -22,6 +22,7 @@ def countWords(a):
     Counter = Counter(list)
     mostCommon = Counter.most_common(10)
     print('Oι δέκα πιο δημοφιλείς λέξεις με την συχνότητα τους ειναι: '+ str(mostCommon))
+    print(" ")
     f.close  
 def countDoubles(a):
     listOfTwo = []
@@ -35,6 +36,7 @@ def countDoubles(a):
     Counter = Counter(listOfTwo)
     mostCommon = Counter.most_common(3)
     print('Oι τρεις πρώτοι συνδυασμοί δύο πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι: '+ str(mostCommon))
+    print(" ")
     f.close  
 def countTriples(a):
     listOfThree = []
@@ -49,6 +51,7 @@ def countTriples(a):
     Counter = Counter(listOfThree)
     mostCommon = Counter.most_common(3)
     print('Oι τρεις πρώτοι συνδυασμοί τριών πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι: ' + str(mostCommon))
+    print(" ")
     f.close  
 makeLower("text.txt")    
 removeNonLetter("text.txt")
