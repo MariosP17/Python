@@ -16,10 +16,8 @@ def chess(h,w):
         bishopX, bishopY = bBishop
         if rookX == bishopX or rookY == bishopY:
             wwins.append(n+1)
-        if (rookX - bishopX == rookY - bishopY):
-            bwins.append(n+1)
-        elif (-rookX + bishopX == rookY - bishopY):
-            bwins.append(n+1)
+        if (rookX - bishopX == rookY - bishopY) or (-rookX + bishopX == rookY - bishopY):
+            bwins.append(n+1) 
     white , black , roundw , roundb = len(wwins), len(bwins), str(wwins)[1:-1] , str(bwins)[1:-1] 
     print('Σε εκατό γύρους πάνω σε σκακιέρα διαστάσεων '+str(h)+'*'+str(w)+' ο παίκτης με τον λευκό πύργο νίκησε',white,'φορές στους γύρους:',roundw,'και ο παίκτης με τον μαύρο αξιωματικό νίκησε',black,'φορές στους γύρους:',roundb)
     print(" ")
