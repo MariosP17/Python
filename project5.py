@@ -1,4 +1,6 @@
 import re
+from collections import Counter
+
 def makeLower (str):
     f = open(str, 'r+')
     low = [line.lower() for line in f]
@@ -15,32 +17,29 @@ def removeNonLetter(str):
         result.writelines(final)
     f.close()
 def countWords(a):
-    from collections import Counter
     f = open(a, 'r+')
     read = f.read()
     list = read.split(' ')
-    Counter = Counter(list)
-    mostCommon = Counter.most_common(10)
+    count = Counter(list)
+    mostCommon = count.most_common(10)
     print('Oι δέκα πιο δημοφιλείς λέξεις με την συχνότητα τους ειναι: '+ str(mostCommon))
     print(" ")
     f.close  
 def countDoubles(a):
     listOfTwo = []
-    from collections import Counter
     f = open(a, 'r+')
     read = f.read()
     list = read.split(' ')
     for s in list:
         if len(s)>2:
          listOfTwo.append(s[:2])
-    Counter = Counter(listOfTwo)
-    mostCommon = Counter.most_common(3)
+    count = Counter(listOfTwo)
+    mostCommon = count.most_common(3)
     print('Oι τρεις πρώτοι συνδυασμοί δύο πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι: '+ str(mostCommon))
     print(" ")
     f.close  
 def countTriples(a):
     listOfThree = []
-    from collections import Counter
     f = open(a, 'r+')
     read = f.read()
     list = read.split(' ')
@@ -48,8 +47,8 @@ def countTriples(a):
     for s in list:
         if len(s)>3:
          listOfThree.append(s[:3])
-    Counter = Counter(listOfThree)
-    mostCommon = Counter.most_common(3)
+    count = Counter(listOfThree)
+    mostCommon = count.most_common(3)
     print('Oι τρεις πρώτοι συνδυασμοί τριών πρώτων γραμμάτων που αρχίζουν οι περισσότερες λέξεις με την συχνότητα τους ειναι: ' + str(mostCommon))
     print(" ")
     f.close  
