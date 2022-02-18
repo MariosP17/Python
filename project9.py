@@ -1,5 +1,3 @@
-import math
-from re import I
 def toBinary(a):
   l,m=[],[]
   for i in a:
@@ -44,7 +42,9 @@ def findSeq(a):
     if any("0000000" in i for i in new):
      num0 = 7
     print("Η μεγαλύτερη ακολουθία από 1 είναι " + str(num) + " άσσοι!")
+    print(" ")
     print("Η μεγαλύτερη ακολουθία από 0 είναι " + str(num0) + " μηδενικά!")
+    print(" ")
     f.close()
 changeToBin('text.txt')
 findSeq("text.txt")
