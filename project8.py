@@ -37,7 +37,7 @@ def chess(h,w):
             bwins.append(n+1) 
     white , black , roundw , roundb = len(wwins), len(bwins), str(wwins)[1:-1] , str(bwins)[1:-1] 
     print('Σε εκατό γύρους πάνω σε σκακιέρα διαστάσεων '+str(h)+'*'+str(w)+' ο παίκτης με τον λευκό πύργο νίκησε',white,'φορές στους γύρους:',roundw,'και ο παίκτης με τον μαύρο αξιωματικό νίκησε',black,'φορές στους γύρους:',roundb)
-    print(" ")
+    print(" ")  
 chess(8,8)
 chess(7,7)
 chess(7,8)
