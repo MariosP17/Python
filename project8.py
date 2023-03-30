@@ -3,6 +3,23 @@ def chess(h,w):
     position= []
     bwins = []
     wwins = []
+    def getletter(i):
+        if i ==1:
+            return "A"
+        if i == 2:
+            return "B"
+        if i == 3:
+            return "C"
+        if i == 4:
+            return "D"
+        if i == 5:
+            return "E"
+        if i == 6:
+            return "F"
+        if i == 7:
+            return "G"
+        if i == 8:
+            return "H"
     for x in range(1,h+1):
         for y in range(1,w+1):
             position.append((x,y))
@@ -11,9 +28,9 @@ def chess(h,w):
         bBishop = random.choice(position)
         while wRook == bBishop:
          bBishop = random.choice(position)
-        print(str(n+1)+")",'Πύργος:',wRook,'Αξιωματικός:',bBishop)
         rookX, rookY = wRook
         bishopX, bishopY = bBishop
+        print(str(n+1)+")",'Πύργος: ('+getletter(rookX)+", "+str(rookY)+") ",'Αξιωματικός: ('+getletter(bishopX)+", "+str(bishopY)+")")
         if rookX == bishopX or rookY == bishopY:
             wwins.append(n+1)
         if (rookX - bishopX == rookY - bishopY) or (-rookX + bishopX == rookY - bishopY):
